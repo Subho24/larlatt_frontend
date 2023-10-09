@@ -47,7 +47,7 @@ export const PictureConatiner = (props) => {
     const generateImage = () => {
         setInputText("")
         setLoading(true)
-        axios.post('/images/generateImage', {
+        axios.post('/api/image/generateImage', {
             message: inputText
         })
         .then(res => {

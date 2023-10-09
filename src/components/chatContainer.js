@@ -46,7 +46,7 @@ export const ChatContainer = (props) => {
     const generateSummary = () => {
         setLoading(true)
         setOutputText("")
-        axios.post('/text/summary', {
+        axios.post('/api/text/summary', {
             message: inputText
         })
         .then(res => {
@@ -65,7 +65,7 @@ export const ChatContainer = (props) => {
     const generateSimplified = () => {
         setLoading(true)
         setOutputText("")
-        axios.post('/text/simplify', {
+        axios.post('/api/text/simplify', {
             message: inputText
         })
         .then(res => {
@@ -84,7 +84,7 @@ export const ChatContainer = (props) => {
     const generateAdvanced = () => {
         setLoading(true)
         setOutputText("")
-        axios.post('/text/advanced', {
+        axios.post('/api/text/advanced', {
             message: inputText
         })
         .then(res => {
@@ -103,7 +103,7 @@ export const ChatContainer = (props) => {
     const generateClearer = () => {
         setLoading(true)
         setOutputText("")
-        axios.post('/text/clearer', {
+        axios.post('/api/text/clearer', {
             message: inputText
         })
         .then(res => {
@@ -122,7 +122,7 @@ export const ChatContainer = (props) => {
     const generateQuestions = () => {
         setLoading(true)
         setOutputText("")
-        axios.post('/text/questions', {
+        axios.post('/api/text/questions', {
             message: inputText
         })
         .then(res => {
@@ -140,7 +140,7 @@ export const ChatContainer = (props) => {
 
     const generateBulletPoints = () => {
         setOutputText("")
-        axios.post('/text/bullets', {
+        axios.post('/api/text/bullets', {
             message: inputText
         })
         .then(res => {
@@ -168,8 +168,8 @@ export const ChatContainer = (props) => {
                 variant="standard"
                 sx={styles.input}
                 multiline={true}
-                maxRows={4}
-                minRows={4}
+                maxRows={6}
+                minRows={6}
                 onChange={({target}) => {
                     handleChnage(target.value)
                 }}
