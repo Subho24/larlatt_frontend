@@ -173,6 +173,7 @@ export const ChatContainer = (props) => {
                 onChange={({target}) => {
                     handleChnage(target.value)
                 }}
+                value={inputText}
                 inputProps={{maxLength: 2000}}
                 helperText={`${inputText.length}/2000`}
                 error={inputText.length > 1999}

@@ -76,6 +76,7 @@ export const PictureConatiner = (props) => {
                     onChange={({target}) => {
                         handleChnage(target.value)
                     }}
+                    value={inputText}
                     inputProps={{maxLength: 100}}
                     helperText={`${inputText.length}/100`}
                     error={inputText.length > 99}
